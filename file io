@@ -1,0 +1,51 @@
+/*
+    a. Reads the file “text.txt”
+    b. Converts all characters to uppercase
+    c. Writes the converted words to another text file i.e. “converted.txt”
+    d. Once you have this working, convert it to a function
+*/
+
+#include <iostream>
+#include <string>
+#include <fstream> //Needed to read and write to and from files
+#include <cctype> //Needed for toupper()
+
+using namespace std;
+
+string capitaliseLine(string sLineFromFile)
+{
+    for (int i = 0; i < sLineFromFile.length(); i++)
+    {
+        sLineFromFile[i] = toupper(sLineFromFile[i]); //Uses the toupper() function to capitalise every characte
+    }
+
+    return sLineFromFile;
+}
+
+int main()
+{
+    ifstream fileHandle; //declare input file
+    ofstream file; //declare output file
+    string sLineFromFile; //declare a string from the file
+
+    fileHandle.open("text.txt"); //Open the file / if the file does not exist, it will be created
+    file.open("converted.txt"); //Open and create the converted.txt file
+
+
+    if (fileHandle.is_open()) //This ensures file is open
+    {
+        while (getline(fileHandle, sLineFromFile)) //getline(fileHandle, sLineFromFile) will return true if there is a next line, false if there is not
+        {
+            cout << capitaliseLine(sLineFromFile);
+        }
+    }
+    else //Error message
+    {
+        cout << "The file could not be opened";
+    }
+
+    fileHandle.close(); //file must be closed
+    system("pause");
+
+    return 0;
+}
