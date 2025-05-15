@@ -5,7 +5,11 @@
 
 using namespace std;
 
-int Square::calculateArea(int iHeightValue, int WidthValue)
+int Square::calculateArea(int iHeightValue, int iWidthValue)
 {
-	return 0;
+	iHeight = iHeightValue;
+	iWidth = iWidthValue;
+	int iArea = iHeight * iWidth;
+
+	return iArea;
 }
