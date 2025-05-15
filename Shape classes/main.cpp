@@ -1,5 +1,7 @@
 #include <iostream>
-#include "shape.h"
+#include "square.h"
+
+using namespace std;
 
 /*
     Defines shape class with constructors and properties (width and height)
@@ -10,7 +12,9 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Square bluesquare;
+
+    bluesquare.calculateArea(5, 6);
 
     system("PAUSE");
     return 0;
