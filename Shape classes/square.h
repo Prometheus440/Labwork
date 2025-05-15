@@ -7,7 +7,7 @@
 class Square : public Shape
 {
 public:
-	int calculateArea();
+	int calculateArea(int iHeightValue, int iWidthValue);
 };
 
 #endif SQUARE_H
