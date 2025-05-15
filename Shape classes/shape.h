@@ -10,7 +10,7 @@ protected:
 	int iHeight;
 	int iWidth;
 
-	void calculateArea(int iHeightValue, int iWidthValue);
+	int calculateArea(int iHeightValue, int iWidthValue);
 
 	void setDimensions(int iHeightValue, int iWidthValue);
 	int getHeight(int iHeightValue);
