@@ -1,7 +1,7 @@
 //Define shape class
 #include "shape.h"
 
-void Shape::calculateArea(int iHeightValue, int IWidthValue)
+int Shape::calculateArea(int iHeightValue, int IWidthValue)
 {
 }
 
